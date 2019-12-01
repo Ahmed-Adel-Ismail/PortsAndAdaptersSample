@@ -1,2 +1,1 @@
-include ':app'
-rootProject.name='App'
+include ':app', ':core', ':preferences', ':server', ':database', ':screen-login', ':screen-favourites', ':screen-forecast', ':presentation', ':screen-splash'

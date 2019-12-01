@@ -2,9 +2,17 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/App.iml" filepath="$PROJECT_DIR$/App.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/PortsAndAdaptersSample.iml" filepath="$PROJECT_DIR$/.idea/PortsAndAdaptersSample.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/core/core.iml" filepath="$PROJECT_DIR$/core/core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/database/database.iml" filepath="$PROJECT_DIR$/database/database.iml" />
+      <module fileurl="file://$PROJECT_DIR$/preferences/preferences.iml" filepath="$PROJECT_DIR$/preferences/preferences.iml" />
+      <module fileurl="file://$PROJECT_DIR$/presentation/presentation.iml" filepath="$PROJECT_DIR$/presentation/presentation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/screen-favourites/screen-favourites.iml" filepath="$PROJECT_DIR$/screen-favourites/screen-favourites.iml" />
+      <module fileurl="file://$PROJECT_DIR$/screen-forecast/screen-forecast.iml" filepath="$PROJECT_DIR$/screen-forecast/screen-forecast.iml" />
+      <module fileurl="file://$PROJECT_DIR$/screen-login/screen-login.iml" filepath="$PROJECT_DIR$/screen-login/screen-login.iml" />
+      <module fileurl="file://$PROJECT_DIR$/screen-splash/screen-splash.iml" filepath="$PROJECT_DIR$/screen-splash/screen-splash.iml" />
+      <module fileurl="file://$PROJECT_DIR$/server/server.iml" filepath="$PROJECT_DIR$/server/server.iml" />
     </modules>
   </component>
 </project>

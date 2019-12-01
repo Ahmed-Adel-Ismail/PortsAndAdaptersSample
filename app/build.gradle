@@ -7,7 +7,7 @@ apply plugin: 'kotlin-android-extensions'
 android {
     compileSdkVersion 28
     defaultConfig {
-        applicationId "com.sample.app"
+        applicationId "com.weather.app"
         minSdkVersion 21
         targetSdkVersion 28
         versionCode 1
@@ -31,4 +31,14 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+
+    implementation project(path: ':server')
+    implementation project(path: ':database')
+    implementation project(path: ':preferences')
+    implementation project(path: ':core')
+    implementation project(path: ':screen-favourites')
+    implementation project(path: ':screen-forecast')
+    implementation project(path: ':screen-login')
+    implementation project(path: ':screen-splash')
 }
