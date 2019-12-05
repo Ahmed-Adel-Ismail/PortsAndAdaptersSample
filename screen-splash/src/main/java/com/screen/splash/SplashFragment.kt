@@ -1,5 +1,6 @@
 package com.screen.splash
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -9,6 +10,10 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
 import androidx.lifecycle.lifecycleScope
 import kotlinx.coroutines.launch
+
+
+const val ACTION_SPLASH_FINISHED = "com.screen.splash.ACTION_SPLASH_FINISHED"
+const val EXTRA_SPLASH_LOGGED_IN_USER = "com.screen.splash.EXTRA_SPLASH_LOGGED_IN_USER"
 
 
 class SplashFragment : Fragment() {
@@ -33,8 +38,10 @@ class SplashFragment : Fragment() {
         }
 
         lifecycleScope.launch {
-            for (isLoggedIn in viewModel.loggedInUser){
-                // handle navigation here
+            for (isLoggedIn in viewModel.loggedInUser) {
+                Intent(ACTION_SPLASH_FINISHED)
+                    .putExtra(EXTRA_SPLASH_LOGGED_IN_USER, isLoggedIn)
+                    .let { activity?.sendBroadcast(it) }
             }
         }
 

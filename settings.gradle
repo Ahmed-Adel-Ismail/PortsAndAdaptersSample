@@ -1,1 +1,13 @@
-include ':app', ':core', ':preferences', ':server', ':database', ':screen-login', ':screen-favourites', ':screen-forecast', ':presentation', ':screen-splash'
+include ':app',
+        ':cache',
+        ':core',
+        ':preferences',
+        ':server',
+        ':database',
+        ':screen-login',
+        ':screen-favourites',
+        ':screen-forecast',
+        ':presentation-core',
+        ':screen-splash',
+        ':logger',
+        ':resources'

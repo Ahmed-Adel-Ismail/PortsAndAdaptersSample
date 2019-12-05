@@ -5,11 +5,11 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion compile_sdk_version
     defaultConfig {
         applicationId "com.weather.app"
-        minSdkVersion 21
-        targetSdkVersion 28
+        minSdkVersion min_sdk_version
+        targetSdkVersion target_sdk_version
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -23,22 +23,27 @@ android {
 }
 
 dependencies {
+
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation 'androidx.appcompat:appcompat:1.1.0'
-    implementation 'androidx.core:core-ktx:1.1.0'
-    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
 
-    implementation project(path: ':server')
-    implementation project(path: ':database')
-    implementation project(path: ':preferences')
-    implementation project(path: ':core')
     implementation project(path: ':screen-favourites')
     implementation project(path: ':screen-forecast')
     implementation project(path: ':screen-login')
     implementation project(path: ':screen-splash')
+    implementation project(path: ':presentation-core')
+
+
+    implementation project(path: ':server')
+    implementation project(path: ':database')
+    implementation project(path: ':preferences')
+    implementation project(path: ':logger')
+    implementation project(path: ':resources')
+    implementation project(path: ':cache')
+    implementation project(path: ':core')
+
+
 }

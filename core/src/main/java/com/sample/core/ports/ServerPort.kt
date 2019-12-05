@@ -7,9 +7,9 @@ import com.sample.core.enities.Username
 
 interface ServerPort {
 
-    fun login(username: Username, password: Password): Token
-    fun register(username: Username, password: Password): Token
-    fun forgotPassword(username: Username): Username
-    fun requestThreeDaysForecast(): List<Forecast>
+    suspend fun login(username: Username, password: Password): Token
+    suspend fun register(username: Username, password: Password): Token
+    suspend fun forgotPassword(username: Username): Username
+    suspend fun requestThreeDaysForecast(): List<Forecast>
 
 }

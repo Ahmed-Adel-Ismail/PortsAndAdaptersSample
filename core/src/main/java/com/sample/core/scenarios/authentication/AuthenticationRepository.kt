@@ -4,6 +4,7 @@ import com.sample.core.enities.Password
 import com.sample.core.enities.Token
 import com.sample.core.enities.Username
 import com.sample.core.ports.ResourcesPort
+import com.sample.core.ports.StringResources
 import com.sample.core.preferences
 import com.sample.core.resources
 import com.sample.core.server
@@ -54,5 +55,5 @@ internal object AuthenticationRepositoryImplementer : AuthenticationRepository {
         preferences.load(KEY_TOKEN)
 
     override suspend fun loadInvalidCredentialsMessage() =
-        resources.stringResource(ResourcesPort.StringResources.InvalidCredentials)
+        resources.localizedString(StringResources.InvalidCredentials)
 }

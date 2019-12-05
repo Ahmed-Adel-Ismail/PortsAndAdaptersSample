@@ -4,10 +4,13 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/PortsAndAdaptersSample.iml" filepath="$PROJECT_DIR$/.idea/PortsAndAdaptersSample.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cache/cache.iml" filepath="$PROJECT_DIR$/cache/cache.iml" />
       <module fileurl="file://$PROJECT_DIR$/core/core.iml" filepath="$PROJECT_DIR$/core/core.iml" />
       <module fileurl="file://$PROJECT_DIR$/database/database.iml" filepath="$PROJECT_DIR$/database/database.iml" />
+      <module fileurl="file://$PROJECT_DIR$/logger/logger.iml" filepath="$PROJECT_DIR$/logger/logger.iml" />
       <module fileurl="file://$PROJECT_DIR$/preferences/preferences.iml" filepath="$PROJECT_DIR$/preferences/preferences.iml" />
-      <module fileurl="file://$PROJECT_DIR$/presentation/presentation.iml" filepath="$PROJECT_DIR$/presentation/presentation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/presentation-core/presentation-core.iml" filepath="$PROJECT_DIR$/presentation-core/presentation-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/resources/resources.iml" filepath="$PROJECT_DIR$/resources/resources.iml" />
       <module fileurl="file://$PROJECT_DIR$/screen-favourites/screen-favourites.iml" filepath="$PROJECT_DIR$/screen-favourites/screen-favourites.iml" />
       <module fileurl="file://$PROJECT_DIR$/screen-forecast/screen-forecast.iml" filepath="$PROJECT_DIR$/screen-forecast/screen-forecast.iml" />
       <module fileurl="file://$PROJECT_DIR$/screen-login/screen-login.iml" filepath="$PROJECT_DIR$/screen-login/screen-login.iml" />

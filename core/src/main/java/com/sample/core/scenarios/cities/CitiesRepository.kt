@@ -4,6 +4,7 @@ import com.sample.core.database
 import com.sample.core.enities.City
 import com.sample.core.enities.CitySearchName
 import com.sample.core.ports.ResourcesPort
+import com.sample.core.ports.StringResources
 import com.sample.core.resources
 
 @DslMarker
@@ -43,5 +44,5 @@ internal object CitiesRepositoryImplementer : CitiesRepository {
         database.deleteFavouriteCity(city)
 
     override suspend fun loadInvalidCitySearchNameMessage() =
-        resources.stringResource(ResourcesPort.StringResources.InvalidCitySearchName)
+        resources.localizedString(StringResources.InvalidCitySearchName)
 }

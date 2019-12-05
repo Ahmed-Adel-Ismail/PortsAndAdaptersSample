@@ -2,12 +2,16 @@ package com.sample.core
 
 import com.sample.core.ports.*
 
-internal lateinit var server: ServerPort
+internal lateinit var cache: CachePort
 internal lateinit var database: DatabasePort
+internal lateinit var logger: LoggerPort
 internal lateinit var preferences: PreferencesPort
-internal lateinit var broadcasts: BroadcastsPort
 internal lateinit var resources: ResourcesPort
+internal lateinit var server: ServerPort
 
+/**
+ * an annotation that marks any code related to integration with the core module
+ */
 @DslMarker
 annotation class IntegrationDsl
 
@@ -17,38 +21,30 @@ annotation class IntegrationDsl
  */
 @IntegrationDsl
 @Suppress("FunctionName")
-fun Core(block: CoreFactory.() -> Unit) {
-    CoreFactory().apply(block)
+fun Core(integrate: AdaptersFactoryProvider.() -> Unit) {
+    integrate(AdaptersFactoryProvider())
 }
 
-class CoreFactory {
+class AdaptersFactoryProvider {
+    @IntegrationDsl
+    val initialize by lazy { AdaptersFactory() }
 
     @IntegrationDsl
-    val with = this
+    val and by lazy { initialize }
+}
+
+class AdaptersFactory {
 
     @IntegrationDsl
-    infix fun server(port: ServerPort) {
-        server = port
-    }
-
-    @IntegrationDsl
-    infix fun database(port: DatabasePort) {
-        database = port
-    }
-
-    @IntegrationDsl
-    infix fun preferences(port: PreferencesPort) {
-        preferences = port
-    }
-
-    @IntegrationDsl
-    infix fun broadcasts(port: BroadcastsPort) {
-        broadcasts = port
-    }
-
-    @IntegrationDsl
-    infix fun resources(port: ResourcesPort) {
-        resources = port
+    infix fun with(port: Any) {
+        when (port) {
+            is ServerPort -> server = port
+            is DatabasePort -> database = port
+            is PreferencesPort -> preferences = port
+            is ResourcesPort -> resources = port
+            is CachePort -> cache = port
+            is LoggerPort -> logger = port
+        }
     }
 }
 
