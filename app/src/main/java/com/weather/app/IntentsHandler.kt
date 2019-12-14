@@ -5,7 +5,7 @@ import android.content.IntentFilter
 import com.screen.splash.ACTION_SPLASH_FINISHED
 import com.screen.splash.SplashFragment
 
-const val ACTION_INITIALIZE = "com.weather.app.ACTION_INITIALIZE"
+const val ACTION_INITIALIZE = "application/com.weather.app.ACTION_INITIALIZE"
 
 fun intentsFilter() = IntentFilter(
     ACTION_INITIALIZE,
