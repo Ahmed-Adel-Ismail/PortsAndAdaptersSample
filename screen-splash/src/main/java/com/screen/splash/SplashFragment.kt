@@ -12,8 +12,8 @@ import androidx.lifecycle.lifecycleScope
 import kotlinx.coroutines.launch
 
 
-const val ACTION_SPLASH_FINISHED = "com.screen.splash.ACTION_SPLASH_FINISHED"
-const val EXTRA_SPLASH_LOGGED_IN_USER = "com.screen.splash.EXTRA_SPLASH_LOGGED_IN_USER"
+const val ACTION_SPLASH_FINISHED = "application/com.screen.splash.ACTION_SPLASH_FINISHED"
+const val EXTRA_SPLASH_LOGGED_IN_USER = "application/com.screen.splash.EXTRA_SPLASH_LOGGED_IN_USER"
 
 
 class SplashFragment : Fragment() {
